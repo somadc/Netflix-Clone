@@ -5,72 +5,25 @@ import ncard from './ncard';
 import Netflix from './Netflix';
 import Amazon from './Amazon';
 
-const favSeries = 'amazon';
 
-// const Favs = () => {
-//     if (favSeries === 'netflix'){
-//         return(
-//             <Netflix />
-//         );
-//     }else {
-//     return(
-//     <Amazon />
-//     );
-
-// }
-// }
-function App(){
+const App = () =>{
 
     return (
-    // Sdata.map(ncard)
-    // <Favs />
-    <>
-    {favSeries === "netflix" ? <Netflix /> : <Amazon /> }
-    </>
-   
-//   {/* <Card
-//   imgSrc={val.imgSrc}
-//   title={val.title}
-//   name={val.sname}
-//   link={val.link}
-//    />
-//   <Card
-//   imgSrc={val.imgSrc}
-//   title={val.title}
-//   name={val.sname}
-//   link={val.link} */}
-//    {/* /> */}
-//   </>
-    )
-    // like this way you can done also
-    // Sdata.map(function ncard(val){
-    //     return (
-    //         <Card
-    //         imgSrc={val.imgSrc}
-    //         title={val.title}
-    //         sname={val.sname}
-    //         link={val.links}
-    //         />
-    //     );
-    // }
-
-    //Above thing can be written in fat arrow function like this way :
-    // Sdata.map(val) => {
-        //     return (
-        //         <Card
-        //         imgSrc={val.imgSrc}
-        //         title={val.title}
-        //         sname={val.sname}
-        //         link={val.links}
-        //         />
-        //     );
-        // }
-
-    //
-        
+        <div>
+        <h1 className="heading_style">List of top 3 Netflix Series in 2020</h1>
+            {Sdata.map((val) =>(
     
+            <Card 
+         imgSrc={val.imgSrc}
+         title={val.title}
+         name={val.name}
+         link={val.link}
+             />
+            ))};
+        </div>
+    
+        )}
+        
 
-
-}
 
 export default App;
